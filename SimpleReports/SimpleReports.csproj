@@ -30,7 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HttpResource, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null">
+    <Reference Include="HttpResource, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\HttpResource\HttpResource\bin\Release\HttpResource.dll</HintPath>
     </Reference>
     <Reference Include="System" />

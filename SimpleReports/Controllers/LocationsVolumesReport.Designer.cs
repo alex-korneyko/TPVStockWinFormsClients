@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Net;
+using System.Windows.Forms;
 using HttpResource;
 using SimpleReports.Model.Domain.DataViewObjects;
 
@@ -43,21 +44,15 @@ namespace SimpleReports.Controllers
             this.FillCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VolumeStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VolumeState = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridVolReports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridVolReports)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridVolReports
             // 
+            this.dataGridVolReports.AllowUserToOrderColumns = true;
             this.dataGridVolReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridVolReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridVolReports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.LocationCode,
-            this.PArtNo,
-            this.Capacity,
-            this.Quontity,
-            this.FillCount,
-            this.VolumeStatus,
-            this.VolumeState});
+            this.dataGridVolReports.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {this.LocationCode, this.PArtNo, this.Capacity, this.Quontity, this.FillCount, this.VolumeStatus, this.VolumeState});
             this.dataGridVolReports.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridVolReports.Location = new System.Drawing.Point(0, 0);
             this.dataGridVolReports.Name = "dataGridVolReports";
@@ -71,6 +66,8 @@ namespace SimpleReports.Controllers
             this.LocationCode.FillWeight = 80F;
             this.LocationCode.HeaderText = "Location Code";
             this.LocationCode.Name = "LocationCode";
+            this.LocationCode.ReadOnly = true;
+            this.LocationCode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // PArtNo
             // 
@@ -78,6 +75,7 @@ namespace SimpleReports.Controllers
             this.PArtNo.FillWeight = 120F;
             this.PArtNo.HeaderText = "Part No";
             this.PArtNo.Name = "PArtNo";
+            this.PArtNo.ReadOnly = true;
             // 
             // Capacity
             // 
@@ -85,6 +83,7 @@ namespace SimpleReports.Controllers
             this.Capacity.FillWeight = 80F;
             this.Capacity.HeaderText = "Capacity";
             this.Capacity.Name = "Capacity";
+            this.Capacity.ReadOnly = true;
             // 
             // Quontity
             // 
@@ -92,6 +91,7 @@ namespace SimpleReports.Controllers
             this.Quontity.FillWeight = 80F;
             this.Quontity.HeaderText = "Quantity";
             this.Quontity.Name = "Quontity";
+            this.Quontity.ReadOnly = true;
             // 
             // FillCount
             // 
@@ -99,6 +99,7 @@ namespace SimpleReports.Controllers
             this.FillCount.FillWeight = 80F;
             this.FillCount.HeaderText = "Ilość do uzupełnienia";
             this.FillCount.Name = "FillCount";
+            this.FillCount.ReadOnly = true;
             // 
             // VolumeStatus
             // 
@@ -106,6 +107,7 @@ namespace SimpleReports.Controllers
             this.VolumeStatus.FillWeight = 140F;
             this.VolumeStatus.HeaderText = "Status Pojemności";
             this.VolumeStatus.Name = "VolumeStatus";
+            this.VolumeStatus.ReadOnly = true;
             // 
             // VolumeState
             // 
@@ -113,6 +115,7 @@ namespace SimpleReports.Controllers
             this.VolumeState.FillWeight = 160F;
             this.VolumeState.HeaderText = "Ustawienie pojemności";
             this.VolumeState.Name = "VolumeState";
+            this.VolumeState.ReadOnly = true;
             // 
             // LocationsVolumesReport
             // 
@@ -122,20 +125,19 @@ namespace SimpleReports.Controllers
             this.Controls.Add(this.dataGridVolReports);
             this.Name = "LocationsVolumesReport";
             this.Size = new System.Drawing.Size(809, 515);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridVolReports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dataGridVolReports)).EndInit();
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
         private System.Windows.Forms.DataGridView dataGridVolReports;
-
-        #endregion
-
+        private System.Windows.Forms.DataGridViewTextBoxColumn FillCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn LocationCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn PArtNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quontity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FillCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VolumeStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn VolumeState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VolumeStatus;
+
+        #endregion
     }
 }
