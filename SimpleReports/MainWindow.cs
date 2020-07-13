@@ -7,14 +7,13 @@ namespace SimpleReports
 {
     public partial class MainWindow: Form
     {
-        private readonly HttpClient _httpClient;
+        // private readonly HttpClient _httpClient;
         private string _applicationServerUrl;
 
         public MainWindow(string applicationServerUrl, string username, string password)
         {
-            _httpClient = new HttpClient(applicationServerUrl);
             _applicationServerUrl = applicationServerUrl;
-            _httpClient.Authenticate("/api/login", username, password);
+            HttpClient.Authenticate("/api/login", username, password);
             
             InitializeComponent();
         }

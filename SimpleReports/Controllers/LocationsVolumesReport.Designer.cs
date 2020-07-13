@@ -59,6 +59,7 @@ namespace SimpleReports.Controllers
             this.dataGridVolReports.RowHeadersVisible = false;
             this.dataGridVolReports.Size = new System.Drawing.Size(809, 515);
             this.dataGridVolReports.TabIndex = 0;
+            this.dataGridVolReports.ColumnHeaderMouseClick += new DataGridViewCellMouseEventHandler(HeaderMouseClick);
             // 
             // LocationCode
             // 

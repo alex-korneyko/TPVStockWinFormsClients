@@ -36,6 +36,9 @@
     <StartupObject>WindowsFormsLibsTester.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HttpResource, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\HttpResource\HttpResource\bin\Release\HttpResource.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

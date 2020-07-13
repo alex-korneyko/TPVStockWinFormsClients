@@ -64,6 +64,8 @@
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Domain\DataViewObjects\LocationVolumeReportView.cs" />
+    <Compile Include="Model\Services\AuxDataObjects\DataGridViewRowColor.cs" />
+    <Compile Include="Model\Services\LocationsVolumesReportsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -79,8 +81,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\Domain\DataRequestObjects\" />
-    <Folder Include="Model\Services\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
